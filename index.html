@@ -98,7 +98,7 @@ nav a.active{
 /* Frame */
 .h-frame{
   position:relative;border:2px solid var(--gold);
-  padding:70px 28px 60px;max-width:500px;width:92%;
+  padding:40px 28px 36px;max-width:480px;width:92%;
   animation:fadeDown 1s ease both;
 }
 .h-frame::before{content:'';position:absolute;inset:7px;border:1px solid rgba(201,168,76,0.35)}
@@ -138,11 +138,11 @@ nav a.active{
 
 /* ── BANDS ── */
 section{padding:70px 20px;max-width:900px;margin:0 auto}
-.sec-title{font-family:'Great Vibes',cursive;font-size:clamp(2rem,6vw,3rem);color:var(--gd);text-align:center;margin-bottom:8px}
-.sec-sub{text-align:center;color:var(--gold);letter-spacing:3px;font-size:0.7rem;text-transform:uppercase;margin-bottom:40px}
+.sec-title{font-family:'Great Vibes',cursive;font-size:clamp(2rem,6vw,3rem);color:var(--goldl);text-align:center;margin-bottom:8px}
+.sec-sub{text-align:center;color:rgba(255,255,255,0.5);letter-spacing:3px;font-size:0.7rem;text-transform:uppercase;margin-bottom:40px}
 .full-band{background:linear-gradient(90deg,var(--gd),var(--gm),var(--gd));padding:70px 20px}
 .full-band section{padding:0}
-.light-band{background:#f0f7f2;padding:70px 20px}
+.light-band{background:linear-gradient(90deg,var(--gd),var(--gm),var(--gd));padding:70px 20px}
 .light-band section{padding:0}
 
 /* ── COUNTDOWN ── */
@@ -164,16 +164,16 @@ section{padding:70px 20px;max-width:900px;margin:0 auto}
 
 /* ── EVENTS ── */
 .ev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.ev-card{background:#fff;border-radius:16px;padding:30px 20px;text-align:center;border-top:4px solid var(--gold);box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s}
+.ev-card{background:rgba(255,255,255,0.07);border:1px solid rgba(201,168,76,0.3);border-radius:16px;padding:30px 20px;text-align:center;border-top:4px solid var(--gold);box-shadow:0 4px 24px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s}
 .ev-card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,0.12)}
 .ev-icon{font-size:2rem;margin-bottom:10px}
-.ev-name{font-family:'Great Vibes',cursive;font-size:1.6rem;color:var(--gd);margin-bottom:6px}
+.ev-name{font-family:'Great Vibes',cursive;font-size:1.6rem;color:var(--goldl);margin-bottom:6px}
 .ev-date{color:var(--gold);font-weight:600;font-size:0.85rem;margin-bottom:4px}
-.ev-time{color:var(--gm);font-size:0.8rem;font-weight:500;margin-bottom:8px}
-.ev-desc{color:#888;font-size:0.76rem;line-height:1.8}
+.ev-time{color:rgba(255,255,255,0.7);font-size:0.8rem;font-weight:500;margin-bottom:8px}
+.ev-desc{color:rgba(255,255,255,0.5);font-size:0.76rem;line-height:1.8}
 
 /* ── VENUE ── */
-.venue-box{background:var(--gd);border-radius:20px;padding:50px 30px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.venue-box{background:rgba(255,255,255,0.07);border:1px solid rgba(201,168,76,0.3);border-radius:20px;padding:50px 30px;text-align:center;color:#fff;position:relative;overflow:hidden}
 .venue-box::before{content:'';position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#c9a84c 0,#c9a84c 1px,transparent 1px,transparent 20px)}
 .v-icon{font-size:3rem;margin-bottom:14px;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
@@ -188,10 +188,10 @@ section{padding:70px 20px;max-width:900px;margin:0 auto}
 .dua-tr{color:rgba(255,255,255,0.6);font-size:0.82rem;font-style:italic;line-height:2}
 
 /* ── WISHES ── */
-.wish-box{background:#fff;border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
-.wish-item{background:var(--cream);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px}
-.wi-name{font-weight:600;font-size:0.83rem;color:var(--gd);margin-bottom:4px}
-.wi-msg{font-size:0.8rem;color:#666;line-height:1.8}
+.wish-box{background:rgba(255,255,255,0.07);border:1px solid rgba(201,168,76,0.3);border-radius:16px;padding:36px;box-shadow:0 4px 24px rgba(0,0,0,0.06)}
+.wish-item{background:rgba(255,255,255,0.05);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:14px 18px}
+.wi-name{font-weight:600;font-size:0.83rem;color:var(--goldl);margin-bottom:4px}
+.wi-msg{font-size:0.8rem;color:rgba(255,255,255,0.65);line-height:1.8}
 
 /* ── FOOTER ── */
 footer{background:var(--gd);color:rgba(255,255,255,0.45);text-align:center;padding:40px 20px;font-size:0.76rem;letter-spacing:2px;position:relative;overflow:hidden}
@@ -336,7 +336,8 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
 </div>
 
 <!-- ── EVENTS ── -->
-<section id="events">
+<div class="full-band">
+<section id="events" style="max-width:900px;margin:0 auto;padding:70px 20px;">
   <h2 class="sec-title reveal">Wedding Programs</h2>
   <p class="sec-sub reveal">Schedule of All Events</p>
   <div class="ev-grid">
@@ -363,6 +364,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
   </div>
 </section>
 
+</div>
 <!-- ── VENUE ── -->
 <div class="light-band" id="venue">
 <section>
@@ -413,6 +415,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;back
   <p class="f-names">Mohd Mahfooz &amp; Rajiya Khatoon</p>
   <p>Nikah · 4 June 2026</p>
   <p style="margin-top:12px">🌙 Khuda Hafiz &nbsp;·&nbsp; Allah Mubarak Kare 💚</p>
+  <br>
   <div class="credit-footer">❤️ 🧡 💛 💚 💙 💜 ❤️ </div>
       <p class="credit-text">Crafted with love by</p>
       <p class="credit-name">Mohd Jeelani Ansari</p>
